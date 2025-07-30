@@ -32,4 +32,5 @@ flake8 src/ tests/
 
 ## Exercise Instructions
 
-Please refer to EXERCISE.md for detailed instructions on completing the DevOps tasks.
+Please refer to DEV_OPS_ENG_EXERCISE.md in this folder for detailed instructions on completing the DevOps tasks.
+**Make sure all tests pass and linting is clean before starting the exercises.**
