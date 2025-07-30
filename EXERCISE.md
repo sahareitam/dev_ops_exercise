@@ -39,28 +39,61 @@ Requirements:
 - Failed checks should block PR merge
 
 ### Task 2: Merge Conflict Resolution
-Demonstrate your ability to handle merge conflicts:
-- Create a new branch from main
-- Make specified changes to the calculator.py file
-- Submit a PR
-- Resolve the resulting merge conflict
-- Ensure pipeline passes after resolution
+Follow these steps to demonstrate merge conflict handling:
+
+1. Create and work on your feature branch:
+   - Checkout new branch from main
+   - Modify any function in calculator.py
+   - Push changes and create PR
+   - Verify PR checks start and pass (don't merge yet)
+
+2. Create the conflict:
+   - Checkout main
+   - Modify the same function you changed in your branch
+   - Push changes to main
+
+3. Resolve the conflict:
+   - Notice that your PR now shows conflicts
+   - PR checks will not start until conflict is resolved
+   - Fix the merge conflict on your branch
+   - Push the resolution
+   - Verify PR checks start again and pass
+   - Merge the PR
 
 Requirements:
-- Clear documentation of conflict resolution steps
-- Maintain code functionality through the resolution
+- Document your conflict resolution approach
+- Ensure final code maintains all functionality
 - All tests must pass after resolution
 
 ### Task 3: Parallel PR Management
-Implement PR dependency management:
-- Create two separate feature branches
-- Submit PRs in parallel
-- Implement mechanism to prevent second PR merge until first is complete
+Follow these steps to demonstrate PR dependency handling:
+
+1. Create first feature PR:
+   - Checkout new branch from main (feature1)
+   - Add new functionality to calculator.py
+   - Push changes and create PR
+   - Verify PR checks pass (don't merge yet)
+
+2. Create dependent PR:
+   - Checkout another branch from main (feature2)
+   - Add functionality that depends on feature1
+   - Push changes and create second PR
+   - In PR description, clearly document dependency on first PR
+   - Verify PR checks pass
+
+3. Manage the dependency:
+   - First PR should be reviewed and merged first
+   - After first PR is merged:
+     - Update your feature2 branch with main
+     - Resolve any conflicts if needed
+     - Push updates
+     - Verify PR checks pass again
+     - Merge the second PR
 
 Requirements:
-- Clear indication of PR dependencies
-- Documentation of dependency management approach
-- Successful sequential merge completion
+- Clear documentation of PR dependencies in descriptions
+- Proper sequencing of merges
+- All tests must pass after both merges
 
 ## Implementation Details
 
@@ -78,20 +111,7 @@ Simple calculator with basic operations:
 - GitHub Actions for CI/CD
 
 ### Development Setup
-1. Fork the repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   pip install -r requirements-dev.txt
-   ```
-3. Run tests locally:
-   ```bash
-   pytest tests/
-   ```
-4. Run linting:
-   ```bash
-   flake8 src/ tests/
-   ```
+check README.md
 
 ## Evaluation Criteria
 
@@ -121,14 +141,15 @@ Simple calculator with basic operations:
 3. Submit:
    - Links to your PRs
    - Brief explanation of your approach
+   - Add Markdown files for any documentation
    - Any challenges encountered and how you resolved them
-
+     
 ## Time Expectations
-- Estimated completion time: 2-3 hours
 - Submit within one week of receiving the exercise
 
 ## Notes
 - Focus on clean, maintainable solutions
 - Document any assumptions made
-- Feel free to ask clarifying questions
+- Recomended to use AI assistants for this work
+- No need to ask clarifying questions, create assumptions
 - Consider edge cases in your implementation
