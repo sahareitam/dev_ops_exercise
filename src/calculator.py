@@ -1,8 +1,4 @@
 class Calculator:
-    # src/calculator.py
-
-    x = 1 + 2  #Intentional error for flake8
-
     @staticmethod
     def add(a: float, b: float) -> float:
         """Add two numbers."""
@@ -24,6 +20,3 @@ class Calculator:
         if b == 0:
             raise ValueError("Division by zero is not allowed")
         return a / b
-
-# Test line for pipeline validation
-x=1+2
