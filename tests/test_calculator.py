@@ -3,8 +3,7 @@ from src.calculator import Calculator
 
 
 def test_add():
-    # assert Calculator.add(1, 2) == 3
-    assert Calculator.add(1, 2) == 4
+    assert Calculator.add(1, 2) == 3
     assert Calculator.add(-1, 1) == 0
     assert Calculator.add(0, 0) == 0
 
