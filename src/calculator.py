@@ -23,3 +23,11 @@ class Calculator:
         if b == 0:
             raise ValueError("Division by zero is not allowed")
         return a / b
+
+    @staticmethod
+    def cube(a: float) -> float:
+        """Calculate the cube of a number."""
+        # TODO: Will be refactored to use square() after its PR is merged.
+        if not isinstance(a, (int, float)):
+            raise TypeError("Argument must be a number")
+        return float(a) ** 3

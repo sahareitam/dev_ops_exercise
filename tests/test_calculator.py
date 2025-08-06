@@ -44,3 +44,15 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         Calculator.divide(5, 0)
+
+
+def test_cube():
+    assert Calculator.cube(2) == 8.0
+    assert Calculator.cube(-3) == -27.0
+    assert Calculator.cube(0) == 0.0
+    assert Calculator.cube(2.5) == 15.625
+
+
+def test_cube_type_validation():
+    with pytest.raises(TypeError):
+        Calculator.cube("string")
