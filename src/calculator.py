@@ -11,10 +11,11 @@ class Calculator:
 
     @staticmethod
     def multiply(a: float, b: float) -> float:
-        """Multiply two numbers with input validation."""
+        """Multiply two numbers with precision and zero optimization."""
         if a == 0 or b == 0:
             return 0.0  # Explicit zero handling for better performance
-        return a * b
+        result = a * b
+        return round(result, 10)  # Handle floating point precision
 
     @staticmethod
     def divide(a: float, b: float) -> float:
