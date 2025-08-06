@@ -23,3 +23,10 @@ class Calculator:
         if b == 0:
             raise ValueError("Division by zero is not allowed")
         return a / b
+
+    @staticmethod
+    def square(a: float) -> float:
+        """Calculate the square of a number."""
+        if not isinstance(a, (int, float)):
+            raise TypeError("Argument must be a number")
+        return float(a) ** 2
