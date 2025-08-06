@@ -56,3 +56,15 @@ def test_cube():
 def test_cube_type_validation():
     with pytest.raises(TypeError):
         Calculator.cube("string")
+
+
+def test_square():
+    assert Calculator.square(2) == 4.0
+    assert Calculator.square(-3) == 9.0
+    assert Calculator.square(0) == 0.0
+    assert Calculator.square(2.5) == 6.25
+
+
+def test_square_type_validation():
+    with pytest.raises(TypeError):
+        Calculator.square("string")

@@ -25,9 +25,16 @@ class Calculator:
         return a / b
 
     @staticmethod
-    def cube(a: float) -> float:
-        """Calculate the cube of a number."""
-        # TODO: Will be refactored to use square() after its PR is merged.
+    def square(a: float) -> float:
+        """Calculate the square of a number."""
         if not isinstance(a, (int, float)):
             raise TypeError("Argument must be a number")
-        return float(a) ** 3
+        return float(a) ** 2
+
+    @staticmethod
+    def cube(a: float) -> float:
+        """Calculate the cube of a number using square function."""
+        if not isinstance(a, (int, float)):
+            raise TypeError("Argument must be a number")
+        square_result = Calculator.square(a)
+        return square_result * float(a)
