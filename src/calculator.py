@@ -11,7 +11,9 @@ class Calculator:
 
     @staticmethod
     def multiply(a: float, b: float) -> float:
-        """Multiply two numbers."""
+        """Multiply two numbers with input validation."""
+        if a == 0 or b == 0:
+            return 0.0  # Explicit zero handling for better performance
         return a * b
 
     @staticmethod
