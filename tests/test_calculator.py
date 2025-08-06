@@ -44,3 +44,15 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         Calculator.divide(5, 0)
+
+
+def test_square():
+    assert Calculator.square(2) == 4.0
+    assert Calculator.square(-3) == 9.0
+    assert Calculator.square(0) == 0.0
+    assert Calculator.square(2.5) == 6.25
+
+
+def test_square_type_validation():
+    with pytest.raises(TypeError):
+        Calculator.square("string")
