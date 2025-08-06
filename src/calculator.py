@@ -30,3 +30,11 @@ class Calculator:
         if not isinstance(a, (int, float)):
             raise TypeError("Argument must be a number")
         return float(a) ** 2
+
+    @staticmethod
+    def cube(a: float) -> float:
+        """Calculate the cube of a number using square function."""
+        if not isinstance(a, (int, float)):
+            raise TypeError("Argument must be a number")
+        square_result = Calculator.square(a)
+        return square_result * float(a)
